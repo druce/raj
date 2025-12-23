@@ -8,3 +8,16 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Data cache
+data/cache/*.parquet
+data/universes/*.json
+
+# Jupyter
+notebooks/.ipynb_checkpoints/
+*.ipynb_checkpoints
+.ipynb_checkpoints/
+
+# Outputs
+outputs/
+reports/

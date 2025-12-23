@@ -11,4 +11,6 @@ dependencies = [
     "pandas>=2.3.3",
     "plotly>=6.5.0",
     "ta-lib>=0.6.8",
+    "yfinance>=0.2.38",
+    "pyarrow>=15.0.0",
 ]
