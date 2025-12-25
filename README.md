@@ -2,6 +2,8 @@
 
 A modular Python trading system for backtesting strategies on US stock data with comprehensive performance metrics, interactive visualizations, and data caching.
 
+![image output](image.png)
+
 ## Features
 
 - **Data Management**: Download and cache daily OHLCV data for top US stocks from yfinance
@@ -112,9 +114,11 @@ raj/
 ├── examples/                   # Usage examples
 │   ├── download_data.py        # Download script
 │   ├── run_backtest.py         # Backtest script
-│   └── generate_signals.py    # Signal generation
-└── notebooks/                  # Jupyter notebooks
-    └── strategy_exploration.ipynb
+│   └── generate_signals.py     # Signal generation
+├── notebooks/                  # Jupyter notebooks 
+│   └── strategy_exploration.ipynb
+└── transcript.txt              # transcript of Claude code session
+    
 ```
 
 ## Creating Custom Strategies
