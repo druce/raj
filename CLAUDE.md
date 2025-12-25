@@ -10,11 +10,18 @@ Raj is a modular Python trading system for backtesting strategies on US stock da
 
 ### Environment Setup
 ```bash
-# Install dependencies using uv
+# Install dependencies and create venv (first time setup)
 uv sync
 
-# Activate virtual environment
+# Option 1: Activate virtual environment manually
 source .venv/bin/activate  # Unix/macOS
+# Then run: python script.py
+
+# Option 2: Run commands with uv (auto-activates venv)
+uv run python script.py
+
+# Install project in editable mode
+uv pip install -e .
 ```
 
 ### Running the Application
@@ -39,10 +46,20 @@ jupyter notebook notebooks/strategy_exploration.ipynb
 ```
 
 ### Package Management
-This project uses `uv` (not pip or poetry):
-- Add dependencies: `uv add <package>`
-- Remove dependencies: `uv remove <package>`
-- Sync dependencies: `uv sync`
+This project uses `uv` for package management (not pip or poetry).
+
+**When to use `uv`:**
+- Installing all dependencies: `uv sync`
+- Adding new dependencies: `uv add <package>` (automatically updates pyproject.toml)
+- Removing dependencies: `uv remove <package>` (automatically updates pyproject.toml)
+- Installing the project in editable mode: `uv pip install -e .`
+- Running Python scripts: `uv run python script.py` (auto-activates venv)
+
+**When you can use regular `pip`:**
+- If you've already activated the venv with `source .venv/bin/activate`, you can use `pip install -e .`
+- However, prefer `uv pip install -e .` for consistency
+
+**Important:** Always use `uv add/remove` to modify dependencies - never edit pyproject.toml manually and then use pip install, as this bypasses uv's dependency resolution.
 
 ## Architecture
 
